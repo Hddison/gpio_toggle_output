@@ -1,3 +1,6 @@
+# IDE settings (CCS/Eclipse auto-generated)
+.settings/
+
 # CMake build output
 build/
 Debug/
