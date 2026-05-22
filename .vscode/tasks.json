@@ -1,0 +1,79 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake 配置 (Configure)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON",
+                "-GNinja",
+                "-Bbuild"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [],
+            "detail": "运行 CMake 生成 Ninja 构建文件"
+        },
+        {
+            "label": "CMake 编译 (Build)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "编译工程 (Ctrl+Shift+B 直接触发)"
+        },
+        {
+            "label": "CMake 清理 (Clean)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build",
+                "--target",
+                "clean"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "清理构建产物"
+        },
+        {
+            "label": "SysConfig GUI",
+            "type": "shell",
+            "command": "C:/ti/sysconfig_1.27.0/sysconfig_gui.bat",
+            "args": [
+                "--compiler", "gcc",
+                "--product", "C:/ti/mspm0_sdk_2_10_00_04/.metadata/product.json",
+                "gpio_toggle_output.syscfg"
+            ],
+            "group": "none",
+            "problemMatcher": [],
+            "detail": "打开 SysConfig 图形化配置界面"
+        },
+        {
+            "label": "SysConfig 生成代码",
+            "type": "shell",
+            "command": "C:/ti/sysconfig_1.27.0/sysconfig_cli.bat",
+            "args": [
+                "--compiler", "gcc",
+                "--product", "C:/ti/mspm0_sdk_2_10_00_04/.metadata/product.json",
+                "--output", "SysConfig",
+                "gpio_toggle_output.syscfg"
+            ],
+            "group": "none",
+            "problemMatcher": [],
+            "detail": "从 .syscfg 重新生成 SysConfig 代码（改完引脚后运行）"
+        }
+    ]
+}

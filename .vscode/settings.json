@@ -1,0 +1,12 @@
+{
+    "clangd.arguments": [
+        "--query-driver=D:/Developer_tools/ARM_Toolchain/arm-gnu-toolchain-15.2/bin/arm-none-eabi-gcc.exe,D:/Developer_tools/ARM_Toolchain/arm-gnu-toolchain-15.2/bin/arm-none-eabi-g++.exe",
+        "--compile-commands-dir=build"
+    ],
+    "cmake.configureArgs": [
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-GNinja"
+    ],
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.sourceDirectory": "${workspaceFolder}"
+}
