@@ -107,8 +107,6 @@
                     </folderInfo>
                     <sourceEntries>
                         <entry excluding="SysConfig|cmake|build" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-                        <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="build/CMakeFiles"/>
-                        <entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="build/.cache"/>
                     </sourceEntries>
                 </configuration>
             </storageModule>
